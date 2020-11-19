@@ -1,14 +1,14 @@
 var readlineSync = require('readline-sync');
 class UserRegistration {
     /**
-     * function to match the pattern of user email id
+     * function to match the pattern of user phone number
      */
     User = () => {
         try {
-            let regex = /^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$/
+            let regex = /^[+][9][1][ ][0-9]{10}$/
             //Take input from user and matches with regex pattern 
-            let userEmail = readlineSync.question("Enter your Email id: ");
-            const pattern = regex.exec(userEmail);
+            let phoneNumber = readlineSync.question("Enter your Phone number: ");
+            const pattern = regex.exec(phoneNumber);
             if (pattern) {
                 console.log("Matches");
             }
