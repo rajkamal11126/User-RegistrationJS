@@ -1,13 +1,13 @@
 var readlineSync = require('readline-sync');
 class UserRegistration {
     /**
-     * function to match the pattern of user password
+     * function to match the pattern of user passswod should atleast 1 numeric case
      */
     User = () => {
         try {
-            let regex = /^(?=.*[A-Z]).{8,}$/
+            let regex = /^(?=.*[0-9])(?=.*[A-Z]).{8,}$/
             //Take input from user and matches with regex pattern 
-            let password = readlineSync.question("Enter your Password atleast 1 upper case: ");
+            let password = readlineSync.question("Enter your Password atleast 1 mumeric case: ");
             const pattern = regex.exec(password);
             if (pattern) {
                 console.log("Matches");
