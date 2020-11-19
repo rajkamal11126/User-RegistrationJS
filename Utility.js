@@ -1,14 +1,14 @@
 var readlineSync = require('readline-sync');
 class UserRegistration {
     /**
-     * function to match the pattern of user phone number
+     * function to match the pattern of user password
      */
     User = () => {
         try {
-            let regex = /^[+][9][1][ ][0-9]{10}$/
+            let regex = /^[a-zA-Z0-9]{8,}$/
             //Take input from user and matches with regex pattern 
-            let phoneNumber = readlineSync.question("Enter your Phone number: ");
-            const pattern = regex.exec(phoneNumber);
+            let password = readlineSync.question("Enter your Password: ");
+            const pattern = regex.exec(password);
             if (pattern) {
                 console.log("Matches");
             }
